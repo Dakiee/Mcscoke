@@ -33,6 +33,8 @@ customElements.define("mcs-header", Header);
 class Footer extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+      <script src="/api/dbconnection/dbconnection.js"></script>
      <section class="footer ">
       <section class="footer-product">
          <ul>
@@ -77,7 +79,7 @@ class Footer extends HTMLElement {
       <section class="footer-contact">
         <p>ХОЛБОГДОХ</p>
         <hr>
-        <form class="footer-contact">
+        <form class="footer-contact" id="holbogdohForm">
          <label for="type">Төрлөө сонгоно уу?</label>
           <select id="type" name="type" class="selection">
       <option value="message">Гомдол, санал хүсэлт</option>
@@ -93,7 +95,6 @@ class Footer extends HTMLElement {
               <input type="text" class="info" id="phone" name="number" placeholder="+976 99112233"/><br />
             </div>
           </div>
-
             <label for="message">Мессеж</label>
             <textarea type="text" class="texting" id="message" name="sms" width="200px" height="100px"/></textarea><br />
             <br /> 
@@ -132,7 +133,6 @@ class Footer extends HTMLElement {
           <p>COPYRIGHT © MCS Coca-Cola Company</p>
         </article>
       </section>
-  
     `;
   }
 }
