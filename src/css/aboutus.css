@@ -26,11 +26,6 @@ main {
   transition: all 1.3s ease;
   transform: translateX(0);
 }
-.reveal2.active {
-  opacity: 1;
-  transition: all 1.5s ease;
-  transform: translateX(0);
-}
 .reveal-tab1 {
   transform: translateY(40px);
 }
@@ -43,13 +38,7 @@ main {
 .reveal-tab2-img1 {
   transform: translateX(-100px);
 }
-.reveal-tab2-img {
-  transform: translateY(200px);
-}
-.info {
-  width: 60%;
-  text-align: start;
-}
+
 .buttons {
   margin: 2% 10% 2% 10%;
   width: 100%;
@@ -57,15 +46,16 @@ main {
   justify-content: space-around;
 }
 
-.buttons > button {
-  background-color: #18829c;
+.btn {
+  border-radius: 0.2rem;
+  background-color: #303030;
   width: 20vw;
   height: 6vh;
   color: var(--white);
   font-size: 1.2vw;
 }
 
-.buttons > button:hover {
+.btn:hover {
   cursor: pointer;
 }
 .homePage-video {
@@ -102,6 +92,13 @@ main {
 #detach-button-host {
   display: none !important;
 }
+.company {
+  padding: var(--main-padding);
+  text-align: justify;
+}
+.company-title:hover {
+  color: var(--main-bg-color);
+}
 .info {
   display: flex;
   flex-direction: column;
@@ -117,14 +114,29 @@ main {
   }
 
   .buttons {
-    margin: 0;
+    display: flex;
+    flex-direction: column;
   }
-  .buttons > button {
-    width: 100%;
-    border: 1px solid var(--gray);
+  .btn {
+    width: auto;
+    border-radius: 0;
+    margin: var(--mobile-padding);
+    margin-top: 0.7em;
   }
   .info {
     width: 100%;
     text-align: center;
+  }
+  .reveal-tab1 {
+    transform: translateX(20px);
+  }
+  .reveal-tab2 {
+    transform: translateX(40px);
+  }
+  .reveal-tab3 {
+    transform: translateX(60px);
+  }
+  .company {
+    padding: var(--mobile-padding);
   }
 }
