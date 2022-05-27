@@ -1,7 +1,8 @@
 var currentPage;
 const newsPage = (pageNumber) => {
   fetch(
-    "https://mcs-back.azurewebsites.net/api/HttpTriggerApi?code=pR4E9rdem8GJxaxg2hhnw1ipUTMcCcR1bZqQZmlBn7y1AzFuFT2wvQ=="
+    "https://mcs-back.azurewebsites.net/api/HttpTriggerApi?code=pR4E9rdem8GJxaxg2hhnw1ipUTMcCcR1bZqQZmlBn7y1AzFuFT2wvQ==",
+    { mode: "no-cors" }
   )
     .then((response) => response.json())
     .then((newsData) => {

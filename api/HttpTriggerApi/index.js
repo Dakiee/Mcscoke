@@ -3,8 +3,18 @@ module.exports = async function (context, req) {
 
   context.res = {
     // status: 200, /* Defaults to 200 */
+    statusCode: 200,
     headers: {
       "Content-Type": "application/json",
+      dataType: "jsonp",
+      "Acces-Control-Allow-Origin": "*",
+      // "Acces-Control-Allow-Methods": "GET,POST,PUT,PATCH,DELETE",
+      // "Access-Control-Allow-Credentials": true,
+      // connection: "close",
+      // "content-encoding": "gzip",
+      // "transfer-encoding": "chunked",
+      // vary: "Accept-Encoding",
+      // "request-context": "appId=cid-v1:a098b77b-a6dd-477d-8e59-a5c4b8d7407d",
     },
     body: [
       {
