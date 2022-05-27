@@ -1,3 +1,11 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyCmJJBHug_B2jx4wY-r8bSPWs-EIDZzvYQ",
   authDomain: "mcs-coke.firebaseapp.com",
@@ -9,8 +17,10 @@ const firebaseConfig = {
   appId: "1:669748157362:web:42535a46d82aff13a6a2ab",
   measurementId: "G-93K05XSMP2",
 };
-//initialize hiiv
-firebase.initializeApp(firebasebaseConfig);
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 //reference
 var holbogdohFormDB = firebase.database().ref("holbogdohForm");
@@ -18,7 +28,7 @@ var holbogdohFormDB = firebase.database().ref("holbogdohForm");
 document.getElementById("holbogdohForm").addEventListener("submit", submitForm);
 
 function submitForm(e) {
-  e.prevenDefault();
+  e.preventDefault();
 
   var email = getElementValue("email");
   var phone = getElementValue("phone");

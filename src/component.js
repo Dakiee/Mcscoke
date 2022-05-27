@@ -33,8 +33,6 @@ customElements.define("mcs-header", Header);
 class Footer extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-      <script src="/api/dbconnection/dbconnection.js"></script>
      <section class="footer ">
       <section class="footer-product">
          <ul>
@@ -102,6 +100,8 @@ class Footer extends HTMLElement {
         </form>
       </section>
       </section>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+      <script src="/dbconnection/dbconnection.js"></script>
       <section class="footer-bottom ">
       <section class="footer-Logo">
          <picture>
@@ -126,13 +126,14 @@ class Footer extends HTMLElement {
            <a href="https://www.youtube.com/channel/UCtqoKNEFjf6qiTk7J846XpQ">
             <img class="icon" alt="icons" src="img/Footer/youtube.png" />
            </a>
-         
+           
          
         </section>
         <article class="bottom-footer-title">
           <p>COPYRIGHT © MCS Coca-Cola Company</p>
         </article>
       </section>
+      
     `;
   }
 }
